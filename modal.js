@@ -83,14 +83,14 @@ const setError = (key, error, htmlElement) => {
 
 function validate() {
   let error1 = document.querySelector("#error1");
-  if (prenom.value == "" && prenom.value.length < 2) {
+  if (prenom.value == "" || prenom.value.length < 2) {
     setError("prenom", true, error1);
   } else {
     setError("prenom", false, error1);
   }
 
   let error2 = document.querySelector("#error2");
-  if (nom.value == "" && nom.value.length < 2) {
+  if (nom.value == "" || nom.value.length < 2) {
     setError("nom", true, error2);
   } else {
     setError("nom", false, error2);
